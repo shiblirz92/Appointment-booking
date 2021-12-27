@@ -1,5 +1,5 @@
 <script src="<?php echo base_url() ?>assets/admin/vendor/global/global.min.js"></script>
-	<script src="<?php echo base_url() ?>assets/admin/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	<!-- <script src="<?php echo base_url() ?>assets/admin/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script> -->
 	<script src="<?php echo base_url() ?>assets/admin/vendor/chart.js/Chart.bundle.min.js"></script>
     <script src="<?php echo base_url() ?>assets/admin/js/custom.min.js"></script>
 	<script src="<?php echo base_url() ?>assets/admin/js/deznav-init.js"></script>

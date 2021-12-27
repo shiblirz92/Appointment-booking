@@ -164,7 +164,7 @@
                                  <div class="d-flex align-items-center ">
                                     <!-- <a class="badge bg-warning-light mr-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Rating" href="#"><i class="far fa-star"></i></a>
                                     <a class="badge bg-success-light mr-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="View" href="#"><i class="lar la-eye"></i></a> -->
-                                    <button type="update"  class="btn btn-danger">Cancel</button><br>
+                                  <a href="<?php echo base_url() ?>booking/checked/<?php echo $value->id ?>/<?php echo $value->doctor_id ?>">  <button type="update"  class="btn btn-danger">Cancel</button> </a> <br>
                                     <?php if($value->booking_date==date('d/m/Y')) { ?>
                                    <a href="<?php echo base_url() ?>main_controller/liveStatus?doctor=<?php echo $value->doctor_id ?> "> <button style="margin-left:1rem" type="update" class="btn btn-success">Live Status</button></a>
                                     <?php } ?>

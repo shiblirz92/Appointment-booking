@@ -5,15 +5,18 @@
             <div class="iq-navbar-logo d-flex align-items-center justify-content-between">
                <i class="ri-menu-line wrapper-menu"></i>
                <a href="<?php echo base_url() ?>" class="header-logo">
+
                <h3 style="font-size:1rem">  <img src="<?php echo base_url() ?>assets/images/logo.png" class="img-fluid rounded-normal light-logo" alt="Apex Hospital">Apex Hospital</h3>
                <img src="<?php echo base_url() ?>assets/images/logo-white.png" class="img-fluid rounded-normal darkmode-logo d-none" alt="logo">
+
+      
                </a>
             </div>
             <div class="iq-menu-horizontal" >
                <nav class="iq-sidebar-menu">
                   <div class="iq-sidebar-logo d-flex align-items-center justify-content-between">
-                     <a href="index.html" class="header-logo">
-                     <img src="../assets/images/logo.png" class="img-fluid rounded-normal" alt="logo">
+                     <a href="<?php echo base_url() ?>" class="header-logo">
+                     <img src="<?php echo base_url() ?>assets/images/logo.png" class="img-fluid rounded-normal" alt="logo">
                      </a>
                      <div class="iq-menu-bt-sidebar">
                         <i class="las la-bars wrapper-menu"></i>
@@ -53,11 +56,21 @@
                   </ul>
                </nav>
             </div>
+            <?php if($this->session->userdata('user_id')){ ?>
+              
+              <a href="<?php echo base_url() ?>main_controller/profile"><button type="submit"   class="btn btn-primary"><?php echo $this->session->userdata('username')?></button></a>
+              
+                        <?php } else { ?>
+                        
+                        <a href="<?php echo base_url() ?>Login"><button type="submit"   class="btn btn-primary">Login</button></a>
+                        <?php } ?>
             <nav class="navbar navbar-expand-lg navbar-light p-0">
+               
                <div class="change-mode">
                   <div class="custom-control custom-switch custom-switch-icon custom-control-indivne">
                      <div class="custom-switch-inner">
-                        <p class="mb-0"> </p>
+                
+                        </div>
                         <input type="checkbox" class="custom-control-input" id="dark-mode" data-active="true">
                         <label class="custom-control-label" for="dark-mode" data-mode="toggle">
                         <span class="switch-icon-left"><i class="a-left"></i></span>
@@ -77,14 +90,14 @@
                         <a href="#" class="search-toggle dropdown-toggle" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                        <!-- <i class="las la-envelope"></i>		 -->
               </a>
-              <?php if($this->session->userdata('user_id')){ ?>
+              <!-- <?php if($this->session->userdata('user_id')){ ?>
               
               <a href="<?php echo base_url() ?>main_controller/profile"><button type="submit"   class="btn btn-primary"><?php echo $this->session->userdata('username')?></button></a>
               
                         <?php } else { ?>
                         
                         <a href="<?php echo base_url() ?>Login"><button type="submit"   class="btn btn-primary">Login</button></a>
-                        <?php } ?>
+                        <?php } ?> -->
                         </div>
                      </li>
                   </ul>

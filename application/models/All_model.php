@@ -82,7 +82,25 @@ public function fetchLiveBookings($id)
 {
     
    $date=date('d/m/Y');
+    $query=$this->db->query('SELECT * from bookings where (status = 0 OR status = 4) AND  doctor_id="'. $id .'" AND booking_date="'. $date .'" ORDER BY status ASc');
+    // echo $this->db->last_query();
+    return $query->result();
+}
+
+public function fetchLiveBookingsUnhold($id)
+{
+    
+   $date=date('d/m/Y');
     $query=$this->db->query('SELECT * from bookings where doctor_id="'. $id .'" AND booking_date="'. $date .'" AND status= 0 ');
+    // echo $this->db->last_query();
+    return $query->result();
+}
+
+public function fetchLiveBookingsHold($id)
+{
+    
+   $date=date('d/m/Y');
+    $query=$this->db->query('SELECT * from bookings where doctor_id="'. $id .'" AND booking_date="'. $date .'" AND status= 4 ');
     // echo $this->db->last_query();
     return $query->result();
 }
@@ -101,6 +119,14 @@ public function insert_data($data){
     // echo  $this->db->last_query() ;
 
     return true;
+}
+
+public function update($tbl_name,$column,$id,$data)
+{
+    $this->db->set($data);
+    $this->db->where($column,$id);
+    $query=$this->db->update($tbl_name);
+    
 }
 
 }

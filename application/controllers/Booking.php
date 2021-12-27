@@ -6,9 +6,9 @@ class Booking extends CI_Controller {
     function __construct() {
         parent::__construct();
         $this->load->model('all_model');
-        if(!$this->session->userdata('user_id')){
-            redirect(base_url().'login');
-        }
+        // if(!$this->session->userdata('user_id')){
+        //     redirect(base_url().'login');
+        // }
     }
 
     public function insert_booking()
@@ -115,5 +115,14 @@ class Booking extends CI_Controller {
         $doc_id=$this->input->get('doc');
 		$res=$this->all_model->fetchBookedDates($doc_id);
         echo json_encode($res);
+	}
+
+    public function checked($id,$doc_id)
+	{
+		$data['status']=1;
+        $view['data']=$this->all_model->update('bookings','id',$id,$data);
+		$this->session->set_flashdata('message','Patient Added To Hold');
+		redirect(base_url().'main_controller/profile');
+		
 	}
 }

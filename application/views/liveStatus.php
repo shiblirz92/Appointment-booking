@@ -76,12 +76,21 @@ console.log(response);
 const total_length=response.length;
 
 total_patient.innerHTML=total_length;
-
+let user = "<?php echo $this->session->userdata('user_id') ?>"
 response.map((result)=>{
 
-    const html=`<li class="col-lg-3 col-md-6 col-sm-12 mt-3 mt-lg-0">
-                           <div class="p-3 border text-center bg-danger text-white pricing-radius-box"> <span class="font-size-16 text-uppercase">Basic</span>
-                              <h2 class="mb-2   text-white">${result.patient_name}<small class="font-size-14"> Month</small></h2>
+
+   if(result.user_id===user)
+   {
+      user="bg-success"
+   }
+   else{
+      user="bg-danger"
+   }
+
+    const html=`<li  class="col-lg-3 col-md-6 col-sm-12 mt-3 mt-lg-0">
+                           <div  class="p-3 border text-center ${user}  text-white pricing-radius-box"> <span class="font-size-16 text-uppercase">Basic</span>
+                              <h2 class="mb-2   text-white">${result.patient_name}<small class="font-size-14"></small></h2>
                                
                            </div>
                         </li>`
