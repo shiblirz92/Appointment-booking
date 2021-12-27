@@ -13,7 +13,7 @@ class Booking extends CI_Controller {
 	
 	public function index()
 	{
-		$view['data']=$this->all_model->get('doctors');
+		$view['data']=$this->all_model->getWithCondition('bookings','status',0);
 		// $view['data']=$this->all_model->get('bookings');
 
 		$view['page']='bookings.php';

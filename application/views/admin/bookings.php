@@ -28,12 +28,12 @@
 											Sl.No
 										</th>
 										<th>Name</th>
-										<th>Email</th>
-										<th>Phone Number</th>
-										<th>Department</th>
-										<!-- <th>Schedule</th>
-										<th>Contact</th>
-										<th>Status</th> -->
+										<th>Age</th>
+										<th>Gender</th>
+										<th>Description</th>
+										 <th>Doctor</th>
+										<th>Booked On</th>
+										<!--<th>Status</th> -->
 									</tr>
 								</thead>
 								<tbody>
@@ -44,15 +44,19 @@
 										<td>
 											<?php echo $key+1; ?>
 										</td>
-										<td><?php echo $value->name; ?></td>
-										<td><?php echo $value->email; ?></td>
-										<td><?php echo $value->phone_number; ?></td>
-
+										<td><?php echo $value->patient_name; ?></td>
+										<td><?php echo $value->age; ?></td>
+										<td><?php echo $value->gender; ?></td>
+										<td><?php echo $value->description; ?></td>
 										<?php 
-										$this->db->where('id',$value->department);
-										$query=$this->db->get('specialization');
+										$this->db->where('id',$value->doctor_id);
+										$query=$this->db->get('doctors');
 									$result =$query->row(); ?>
-										<td><?php echo $result->specialization; ?></td>
+										<td><?php echo $result->name ?></td>
+										<td><?php echo $value->added_on; ?></td>
+
+										
+										
 										<!-- <td>
 											<a href="#" class="btn btn-primary light btn-rounded btn-sm" >5 Appointment</a>
 										</td> -->
