@@ -8,11 +8,11 @@
                      <a href="#" class="d-block">
                         <img class="img-fluid w-50" src="<?php echo base_url() ?>assets/images/log.png" alt="#" title=""> <!--set pic -->
                      </a><br>
-                     <h1 class="mt-4">Apex Hospital this one place for all your need. <span class="text-primary">Events, Schedule
-                           Events</span>
-                        &amp; <span class="text-primary"><span class="text-primary"></span>WorkFlow
+                     <h1 class="mt-4">Apex Hospital this one place for all your need. <span class="text-primary">Surgery, Schedule
+                           Appointement</span>
+                        &amp; <span class="text-primary"><span class="text-primary"></span>CheckUp
                      </span></h1>
-                     <p class="mt-5">Built for small Business owners, eterprnuer,<br> freelanserd and startups.</p>
+                     <p class="mt-5">Built for customers convenience, fast response<br> and better reach.</p>
                      <div class="d-flex align-items-center mb-3">
                      </div>
                      <div class="d-flex align-items-center">
@@ -25,7 +25,7 @@
                </div>
 			   <br><br>
 			   <h3 style="text-align:center;"> OUR SERVICES </h3>
-				  <P><br><br> Once your JPG images have been uploaded, our tool will begin to convert the file to the PNG format. <br><br>You can then view your new PNG file format by downloading the PNG image to your computer from online, or through a secure link which that can be sent to your email address.<br><br> Please note that this link to your new PNG format will only be available for access over the next 24 hours in order to allow you to time to access your PNG image file.
+				  <P><br><br>Why Choose Apex Hospital? <br><br>Apex Hospital has a robust presence across the healthcare ecosystem. From routine wellness & preventive health care to innovative life-saving treatments and diagnostic services. <br><br> Apex Hospital has been the pioneer in bringing ground-breaking healthcare technologies to India.
 				  </p>
             </div>
          </div>

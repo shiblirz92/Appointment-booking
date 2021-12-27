@@ -5,7 +5,7 @@
             <div class="iq-navbar-logo d-flex align-items-center justify-content-between">
                <i class="ri-menu-line wrapper-menu"></i>
                <a href="<?php echo base_url() ?>" class="header-logo">
-               <img src="<?php echo base_url() ?>assets/images/logo.png" class="img-fluid rounded-normal light-logo" alt="Apex Hospital">
+               <h3 style="font-size:1rem">  <img src="<?php echo base_url() ?>assets/images/logo.png" class="img-fluid rounded-normal light-logo" alt="Apex Hospital">Apex Hospital</h3>
                <img src="<?php echo base_url() ?>assets/images/logo-white.png" class="img-fluid rounded-normal darkmode-logo d-none" alt="logo">
                </a>
             </div>

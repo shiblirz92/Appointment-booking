@@ -19,9 +19,7 @@
             <div class="card card-block card-stretch card-height">
                <div class="card-body text-center">
                </a>
-                 <span style="width:10rem;height:10rem"> <img style="width:15rem;height:15rem;border-radius:50%" src="http://3.bp.blogspot.com/-ywdjSqK7PFA/UBUjNrArR4I/AAAAAAAAEO0/LG1r4CtLeJ0/s1600/IMG_2551.JPG" alt=""></span>
-                <br>
-                 <button style="position:relative;margin-top:1rem" type="submit" data-dismiss="modal" class="btn btn-outline-warning">Change Profile<input style="opacity:0;width:100%;height:100%;position:absolute;left:0;top:0" type="file"></button>
+
                   
                </div>
             </div>
@@ -61,18 +59,13 @@
                                  </div>
                               </div>
 
-                              <div class="col-lg-12">
-                                 <div class="floating-input form-group">
-                                    <textarea class="form-control" type="password" name="password" id="password" required=""></textarea>
-                                    <label class="form-label" for="password">Address</label>
-                                 </div>
-                              </div>
+                              
 
                              
                              
                               
                            </div>
-                           <button type="update" class="btn btn-primary">Update</button>
+                          
                          
                         </form>
                </div>
