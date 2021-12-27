@@ -69,7 +69,7 @@
                         <ul aria-expanded="false">
 							<li><a href="<?php echo base_url() ?>admin">Dashboard</a></li>
 							<li><a href="<?php echo base_url() ?>admin/booking">Bookings</a></li>
-							<li><a href="<?php echo base_url() ?>admin/booking/livePatients">Live Patients</a></li>
+							<li><a href="<?php echo base_url() ?>admin/booking/getBookings">Live Patients</a></li>
 							<li><a href="<?php echo base_url() ?>admin/doctor">Doctor</a></li>
 							
 							<li><a href="<?php echo base_url() ?>admin/booking/adminDetails">Add Admin</a></li>

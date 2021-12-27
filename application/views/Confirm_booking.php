@@ -104,7 +104,7 @@ color: #fff;
                     <br>
                     <div style="flex:1 20%">
                     <label for="">Choose Appointment Date</label><br>
-                        <input style="width:15rem;padding:1rem;text-align:center;font-size:1.5rem;letter-spacing:0.5rem" name="booking_date" style=";" type="text" value="<?php echo date('d-m-y') ?>" id="date" readonly >
+                        <input style="width:15rem;padding:1rem;text-align:center;font-size:1.5rem;letter-spacing:0.5rem" name="booking_date" style=";" type="text" value=""  id="date" readonly >
                     </div>
                 </div>
 

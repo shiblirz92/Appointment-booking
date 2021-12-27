@@ -17,11 +17,14 @@
 					<div class="mr-auto d-lg-block">
 						
 					</div>
-					
+					<div class="input-group search-area ml-auto d-inline-flex mr-2">
+				<a href="<?php echo base_url() ?>admin/booking/holdPatients"><button class="btn btn-warning btn-block">
+								<i class="fas fa-pause"></i> Patient's On Hold							
+								</button></a>	
+					</div>
 				
 				</div>
 				<div class="row">
-					
 				<?php foreach($data as $key=>$value){ ?>
 					
 				<div class="col-xl-4 col-lg-12 col-sm-12">
@@ -30,7 +33,6 @@
 								
 								<h3 class="mt-3 mb-1 text-white"><?php echo $value->patient_name ?></h3>
 								<p class="text-white mb-0"><?php echo $value->description ?></p>
-								<p class="text-white mb-0"><?php echo $value->booking_date ?></p>
 							</div>
 							<!-- <ul class="list-group list-group-flush">
 								<li class="list-group-item d-flex justify-content-between"><span class="mb-0">Patient Gender</span> <strong class="text-muted">Female	</strong></li>
@@ -39,19 +41,12 @@
 								<li class="list-group-item d-flex justify-content-between"><span class="mb-0">Patient Weight</span> <strong class="text-muted">65 Kg	</strong></li>
 							</ul> -->
                             <div class="card-footer border-0 mt-0">								
-								<a href="<?php echo base_url() ?>admin/booking/checked/<?php echo $value->id ?>/<?php echo $value->doctor_id ?>"><button class="btn btn-primary  btn-block" <?php if($key!=0){echo "disabled";} ?> style="display:<?php if($value->status == 4){echo "none"; } ?>" >
+								<button class="btn btn-primary  btn-block" <?php if($key!=0){echo "disabled";} ?> >
 									<i class="fas fa-check-square"></i> Checked							
-								</button></a>	<br>
-
-								<?php if($value->status == 4){ ?>
-							<a href="<?php echo base_url() ?>admin/booking/unhold/<?php echo $value->id ?>/<?php echo $value->doctor_id ?>">	<button class="btn btn-danger btn-block">
-								<i class="fas fa-pause"></i> Unhold							
-								</button>	</a>
-								<?php } else { ?>
-									<a href="<?php echo base_url() ?>admin/booking/hold/<?php echo $value->id ?>/<?php echo $value->doctor_id ?>">	<button class="btn btn-danger btn-block">
+								</button>	
+								<button class="btn btn-danger btn-block">
 								<i class="fas fa-pause"></i> Hold							
-								</button>	</a>
-								<?php } ?>
+								</button>	
                             </div>
                         </div>
 					</div>
