@@ -77,20 +77,36 @@ const total_length=response.length;
 
 total_patient.innerHTML=total_length;
 let user = "<?php echo $this->session->userdata('user_id') ?>"
+let warning =""
 response.map((result)=>{
 
 
    if(result.user_id===user)
    {
       user="bg-success"
+      if(result.status==4){
+         user="bg-danger"
+      warning="You Are On Hold"
    }
-   else{
-      user="bg-danger"
    }
+   else if(result.status==4){
+         user="bg-warning"
+      warning="Patient On Hold"
+   }
+   else
+   {
+      user="bg-primary";
+   }
+
+   
+   
+
+
 
     const html=`<li  class="col-lg-3 col-md-6 col-sm-12 mt-3 mt-lg-0">
                            <div  class="p-3 border text-center ${user}  text-white pricing-radius-box"> <span class="font-size-16 text-uppercase">Basic</span>
-                              <h2 class="mb-2   text-white">${result.patient_name}<small class="font-size-14"></small></h2>
+                              <h2 class="mb-2   text-white">${result.patient_name}<small class="font-size-14"></small></h2> <br>   
+                              <strong>${warning}</strong>
                                
                            </div>
                         </li>`
