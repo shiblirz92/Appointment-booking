@@ -36,15 +36,15 @@ class Login extends CI_Controller {
         {
             $this->session->set_userdata(array('user_id'=>$data->id,'username'=>$data->username , 'profile_picture'=>$data->profile_picture));
             redirect(base_url());
-            print_r($data);
+            
             
 
 
         }
 
         else{
-
-            echo 'error';
+            $this->session->set_flashdata("error_message", "Wrong Username Password");
+            redirect(base_url().'login');
         }
     }
 

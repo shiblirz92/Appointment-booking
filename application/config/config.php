@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/appointmentbooking/';
+$config['base_url'] = 'http://localhost/Appointment-booking/';
 // $config['base_url'] = 'https://apexhospital.azurewebsites.net/';
 
 /*

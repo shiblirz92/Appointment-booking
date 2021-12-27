@@ -5,7 +5,7 @@
                   <div class="card">
                      <div class="card-body text-center">
                         <h2>Sign In</h2>
-                        <p></p>
+                        <p style="color:red"><?php echo $this->session->flashdata('error_message') ?></p>
                         <form action="<?php echo base_url() ?>login/loginCheck" method="post">
                            <div class="row">
                               <div class="col-lg-12">
