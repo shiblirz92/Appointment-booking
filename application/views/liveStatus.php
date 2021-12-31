@@ -54,7 +54,7 @@
 
 setTimeout(function(){
    window.location.reload(1);
-}, 5000);
+}, 20000);
 
 // setTimeout(function(){
 //    window.location.reload(1);
@@ -71,31 +71,56 @@ window.addEventListener('load',async function(){
     $("#list").empty();
 const url= "<?php echo base_url().'booking/fetchLiveBookings/'?>"+<?php echo $doctor ?>;
 const response = await fetch(url).then(result=>result.json()).then(data=>data);
-console.log(response);
+
 
 const total_length=response.length;
 
 total_patient.innerHTML=total_length;
-let user = "<?php echo $this->session->userdata('user_id') ?>"
+let user_id = "<?php echo $this->session->userdata('user_id') ?>"
+let user = ""
 let warning =""
 response.map((result)=>{
+   console.log(user_id);
+   console.log(result.user_id);
 
+   // if(result.user_id==user)
+   // {
+      
+   //    if(result.status==4){
+   //       user="bg-danger"
+   //    warning="You Are On Hold"
+   // }
+   // else{
+   //    user="bg-success"
+   // }
+   // }
+ if(result.status==4){
 
-   if(result.user_id===user)
-   {
-      user="bg-success"
-      if(result.status==4){
-         user="bg-danger"
+    if(result.user_id==user_id)
+    {
+      result.patient_name="You"
+      user="bg-danger"
       warning="You Are On Hold"
-   }
-   }
-   else if(result.status==4){
-         user="bg-warning"
+    }
+    else{
+      user="bg-warning"
       warning="Patient On Hold"
+    }
+         
    }
    else
    {
+      if(result.user_id==user_id)
+    {
+      user="bg-success"
+      result.patient_name="You"
+      
+    }
+    else
+    {
       user="bg-primary";
+    }
+      
    }
 
    

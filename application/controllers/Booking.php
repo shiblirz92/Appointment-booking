@@ -13,12 +13,17 @@ class Booking extends CI_Controller {
 
     public function insert_booking()
     {
+
+        if(!$this->session->userdata('user_id')){
+            redirect(base_url().'login');
+        }
+
         $formData=$_POST;
 
         $bookingNumber=$this->all_model->checkBookedDates($_POST['booking_date'],$_POST['doctor']);
 
         // print_r($bookingNumber);
-        echo count($bookingNumber);
+        
 
         if(count($bookingNumber)<=19)
         {
@@ -63,6 +68,9 @@ class Booking extends CI_Controller {
 
     public function bookAppointment()
 	{
+        if(!$this->session->userdata('user_id')){
+            redirect(base_url().'login');
+        }
 		$view['specialization']=$this->all_model->get('specialization');
 		$view['page']='booking_calender.php';
 		$this->load->view('index',$view);
@@ -70,6 +78,9 @@ class Booking extends CI_Controller {
 
     public function confirmBooking()
 	{
+        if(!$this->session->userdata('user_id')){
+            redirect(base_url().'login');
+        }
 
         if(isset($_POST['doctor']))
         {

@@ -11,7 +11,7 @@
 			<div class="container-fluid">
 				<div class="form-head d-flex mb-3 mb-md-4 align-items-start">
 					<div class="mr-auto d-lg-block">
-						<a href="doctor-detail.html" class="btn btn-primary btn-rounded">+ Add New</a>
+						<!-- <a href="#" class="btn btn-primary btn-rounded">+ Add New</a> -->
 					</div>
 					<div class="input-group search-area ml-auto d-inline-flex mr-2">
 						
@@ -27,6 +27,7 @@
 										<th>
 											Sl.No
 										</th>
+										<th>Appointment Date</th>
 										<th>Name</th>
 										<th>Age</th>
 										<th>Gender</th>
@@ -44,6 +45,7 @@
 										<td>
 											<?php echo $key+1; ?>
 										</td>
+										<td><?php echo $value->booking_date; ?></td>
 										<td><?php echo $value->patient_name; ?></td>
 										<td><?php echo $value->age; ?></td>
 										<td><?php echo $value->gender; ?></td>

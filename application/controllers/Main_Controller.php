@@ -33,7 +33,7 @@ class Main_Controller extends CI_Controller {
 		
 
 		$formData['password']=md5($_POST['password']);
-		print_r($formData);
+		
 
 		$this->all_model->insert('user',$formData);
 		// $this->session->set_flashdata()
